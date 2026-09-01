@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal biodata portfolio." />
+    <title>My Biodata — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="logo" href="#top" aria-label="Homepage"><span id="logo-initials">YN</span><span>.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#biodata">Biodata</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#employment">Employment</a><a href="#training">Training</a><a href="#contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu <span aria-hidden="true">☰</span></button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">◐</button>
+        <a class="availability" href="#contact"><i></i> Open to opportunities</a>
+      </div>
+    </header>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#biodata">Biodata</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#employment">Employment</a><a href="#training">Training</a><a href="#contact">Contact</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero section">
+        <p id="hero-role" class="eyebrow reveal">Student &amp; aspiring professional</p>
+        <h1 class="reveal">Hello, I’m<br /><em id="hero-name">Your Name.</em></h1>
+        <figure class="hero-photo reveal">
+          <img src="assets/sowad-ahmed.png" alt="Portrait of Sowad Ahmed" />
+        </figure>
+        <div class="hero-bottom reveal">
+          <p id="hero-summary">A short introduction about you will appear here.</p>
+          <a class="round-link" href="#biodata" aria-label="Explore my biodata">↓</a>
+        </div>
+        <div class="hero-orbit" aria-hidden="true"><span>SCROLL TO EXPLORE · SCROLL TO EXPLORE · </span></div>
+      </section>
+
+      <section id="biodata" class="work section">
+        <div class="section-heading reveal"><p class="eyebrow">Personal biodata</p><span>My profile</span></div>
+        <div id="bio-cards" class="bio-cards reveal"></div>
+      </section>
+
+      <section id="education" class="about section">
+        <div class="section-heading reveal"><p class="eyebrow">Education &amp; goals</p><span>Learning journey</span></div>
+        <div class="about-grid">
+          <h2 class="reveal">Always learning.<br />Growing with <em>purpose.</em></h2>
+          <div class="about-copy reveal">
+            <div id="education-list" class="education-list"></div>
+            <p id="career-goal"></p>
+            <a class="text-link" href="#contact">Get in touch <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section section">
+        <div class="section-heading reveal"><p class="eyebrow">Capabilities</p><span>Skills &amp; tools</span></div>
+        <div class="skills-intro reveal"><h2>Skills that keep<br /><em>growing.</em></h2><p>A blend of technical knowledge, operations experience, and creative tools.</p></div>
+        <div id="skills-list" class="skills-grid"></div>
+      </section>
+
+      <section id="employment" class="employment section">
+        <div class="section-heading reveal"><p class="eyebrow">Employment</p><span>Experience</span></div>
+        <div id="employment-list" class="employment-list reveal"></div>
+      </section>
+
+      <section id="training" class="training section">
+        <div class="section-heading reveal"><p class="eyebrow">Training &amp; courses</p><span>Professional development</span></div>
+        <div class="training-grid reveal">
+          <article><p class="eyebrow">Industrial training</p><h3 id="training-title"></h3><p id="training-description"></p></article>
+          <article><p class="eyebrow">Courses</p><ul id="courses-list"></ul></article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <p class="eyebrow reveal">Let’s connect</p>
+        <h2 class="reveal">Thank you for<br /><em>visiting my profile.</em></h2>
+        <a id="email-link" class="email-link reveal" href="mailto:your.email@example.com">your.email@example.com <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> <span id="footer-name">Your Name</span></p>
+      <div id="social-links"></div>
+      <button id="back-to-top" type="button">Back to top ↑</button>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
