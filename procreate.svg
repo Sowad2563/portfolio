@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Procreate">
+  <defs><linearGradient id="p" x1="8" y1="7" x2="57" y2="58" gradientUnits="userSpaceOnUse"><stop stop-color="#6cf0df"/><stop offset=".48" stop-color="#376db6"/><stop offset="1" stop-color="#121d5d"/></linearGradient></defs>
+  <circle cx="32" cy="32" r="30" fill="url(#p)"/>
+  <path d="M18 43c9-5 18-14 28-28M25 48c8-4 16-11 23-21" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4.2"/>
+  <path d="m45 14 5 5-3 3-5-5 3-3Z" fill="#fff"/>
+</svg>
