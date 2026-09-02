@@ -10,9 +10,9 @@ const profile = {
     ["Location", "Dhaka, Bangladesh"], ["Phone", "+8801769510682"], ["Languages", "Bangla (Native)\nEnglish (Bilingual Proficiency)\nArabic (Elementary)"],
   ],
   education: [
-    { period: "2017 - 2023", title: "Bachelor of Science in Computer Science & Engineering", place: "Bangladesh University of Professionals · CGPA 3.56 / 4.00", mark: "BUP" },
-    { period: "2013 - 2015", title: "Higher Secondary Certificate (HSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC" },
-    { period: "2015 - 2017", title: "Secondary School Certificate (SSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC" },
+    { period: "2017 - 2023", title: "Bachelor of Science in Computer Science & Engineering", place: "Bangladesh University of Professionals · CGPA 3.56 / 4.00", mark: "BUP", image: "assets/bup-campus.png", imageAlt: "Bangladesh University of Professionals academic building" },
+    { period: "2013 - 2015", title: "Higher Secondary Certificate (HSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC", image: "assets/jcc-academic-block.jpg", imageAlt: "Jhenidah Cadet College academic building" },
+    { period: "2015 - 2017", title: "Secondary School Certificate (SSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC", image: "assets/jcc-academic-block.jpg", imageAlt: "Jhenidah Cadet College academic building" },
   ],
   employment: [
     { period: "18 Jun 2020 - 09 Aug 2026", title: "Captain, Bangladesh Army", organization: "4 Signal Battalion\n3 Signal Battalion", logo: "https://ispr.gov.bd/wp-content/uploads/2024/08/Army-logo-1-3.jpg", logoAlt: "Bangladesh Army emblem", duties: ["Led teams in administrative, communication, and IT operations.", "Managed data servers, networks, and CCTV operations.", "Conducted army-level video teleconferences.", "Coordinated with civil administration during national elections and internal security duties."] },
@@ -41,7 +41,10 @@ const email = document.querySelector("#email-link");
 email.href = `mailto:${profile.email}`;
 email.firstChild.textContent = `${profile.email} `;
 document.querySelector("#bio-cards").innerHTML = profile.bio.map(([label, value], index) => `<article class="bio-card"><span>0${index + 1}</span><p>${label}</p><h3>${value}</h3></article>`).join("");
-document.querySelector("#education-list").innerHTML = profile.education.map(item => `<article><span>${item.period}</span><strong>${item.title}</strong><p>${item.place}</p><b class="education-watermark" aria-hidden="true">${item.mark}</b></article>`).join("");
+document.querySelector("#education-list").innerHTML = profile.education.map(item => {
+  const image = item.image ? `<img class="education-institution-image" src="${item.image}" alt="${item.imageAlt}" />` : "";
+  return `<article class="${item.image ? "education-with-image" : ""}">${image}<span>${item.period}</span><strong>${item.title}</strong><p>${item.place}</p><b class="education-watermark" aria-hidden="true">${item.mark}</b></article>`;
+}).join("");
 document.querySelector("#employment-list").innerHTML = profile.employment.map(item => `<article><span>${item.period}</span><div class="employment-role">${item.logo ? `<img class="employment-logo" src="${item.logo}" alt="${item.logoAlt}" />` : ""}<div><h3>${item.title}</h3><p>${item.organization}</p></div></div><ul>${item.duties.map(duty => `<li>${duty}</li>`).join("")}</ul></article>`).join("");
 document.querySelector("#training-title").textContent = profile.training.title;
 document.querySelector("#training-description").textContent = profile.training.description;
