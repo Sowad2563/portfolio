@@ -11,8 +11,8 @@ const profile = {
   ],
   education: [
     { period: "2017 - 2023", title: "Bachelor of Science in Computer Science & Engineering", place: "Bangladesh University of Professionals · CGPA 3.56 / 4.00", mark: "BUP", image: "assets/bup-campus.png", imageAlt: "Bangladesh University of Professionals academic building" },
-    { period: "2013 - 2015", title: "Higher Secondary Certificate (HSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC", image: "assets/jcc-academic-block.jpg", imageAlt: "Jhenidah Cadet College academic building" },
-    { period: "2015 - 2017", title: "Secondary School Certificate (SSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC", image: "assets/jcc-academic-block.jpg", imageAlt: "Jhenidah Cadet College academic building" },
+    { period: "2013 - 2015", title: "Higher Secondary Certificate (HSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC", image: "assets/jcc-campus.png", imageAlt: "Jhenidah Cadet College campus" },
+    { period: "2015 - 2017", title: "Secondary School Certificate (SSC)", place: "Jhenidah Cadet College · GPA 5.00 / 5.00", mark: "JCC", image: "assets/jcc-campus.png", imageAlt: "Jhenidah Cadet College campus" },
   ],
   employment: [
     { period: "18 Jun 2020 - 09 Aug 2026", title: "Captain, Bangladesh Army", organization: "4 Signal Battalion\n3 Signal Battalion", logo: "https://ispr.gov.bd/wp-content/uploads/2024/08/Army-logo-1-3.jpg", logoAlt: "Bangladesh Army emblem", duties: ["Led teams in administrative, communication, and IT operations.", "Managed data servers, networks, and CCTV operations.", "Conducted army-level video teleconferences.", "Coordinated with civil administration during national elections and internal security duties."] },
