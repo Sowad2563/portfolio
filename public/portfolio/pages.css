@@ -16,7 +16,6 @@
 .certificate-id { margin-top:16px !important; font:.66rem "DM Mono",monospace !important; letter-spacing:.05em; }
 .certificate-preview { position:relative; margin-top:22px; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:#fff; }
 .certificate-preview img { display:block; width:100%; aspect-ratio:1.42; object-fit:cover; object-position:center; filter:contrast(.95) saturate(.75); }
-.certificate-preview::after { content:"PREVIEW ONLY"; position:absolute; inset:0; display:grid; place-items:center; color:rgba(28,81,52,.8); background:rgba(255,255,255,.08); font:600 clamp(.85rem,2.4vw,1.35rem) "DM Mono",monospace; letter-spacing:.18em; text-shadow:0 1px 0 rgba(255,255,255,.85); transform:rotate(-16deg) scale(1.14); pointer-events:none; }
 .life-grid { display:grid; grid-template-columns:1.15fr .85fr .85fr; gap:18px; }
 .life-card--feature { min-height:350px; background:linear-gradient(135deg,var(--card),color-mix(in srgb,var(--card) 62%,var(--accent))); }
 .life-card--feature p { max-width:400px; }
