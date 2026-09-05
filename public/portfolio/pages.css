@@ -36,3 +36,63 @@
 .page-return { display:inline-flex; align-items:center; gap:8px; margin-top:56px; color:var(--text); border-bottom:1px solid currentColor; padding-bottom:5px; font-size:.9rem; }
 .page-return span { color:var(--accent); }
 @media (max-width:700px) { .page-content { min-height:calc(100vh - 64px); padding-top:72px; } .certificate-grid,.life-grid,.interests-grid,.photo-slots { grid-template-columns:1fr; } .certificate-card,.life-card--feature { min-height:220px; } .page-section-heading { align-items:flex-start; flex-direction:column; gap:10px; } .interest-card { min-height:0; } .interest-card h3 { margin-top:22px; } .photo-slot div { aspect-ratio:1.5; } }
+
+.travel-photo,.personal-photo { display:block; width:100%; height:auto; border-radius:12px; border:1px solid var(--line); }
+.travel-photo { margin-top:20px; }
+.personal-photo { border-radius:16px; }
+
+.interest-link { display:inline-block; margin-top:20px; color:var(--accent); font-size:.875rem; line-height:1.5; text-underline-offset:4px; }
+.interest-link:hover { text-decoration:underline; }
+.interest-link:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+#oil-painting { scroll-margin-top:100px; }
+.painting-interest { padding:clamp(24px,4vw,48px); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:16px; background:var(--card); }
+.painting-interest p { max-width:640px; margin:0; color:var(--muted); font-size:1.05rem; line-height:1.7; }
+.reading-book { margin:20px 0 0; }
+.reading-book img { display:block; width:100%; max-width:180px; height:auto; border-radius:4px; border:1px solid var(--line); }
+.reading-book figcaption { margin-top:12px; color:var(--text); font-size:.95rem; line-height:1.5; }
+.reading-book figcaption span { display:block; color:var(--muted); font-family:inherit; font-size:.875rem; letter-spacing:normal; }
+
+/* Shared rows keep the interest cards and their media aligned. */
+.interests-grid { grid-template-columns:repeat(6,minmax(0,1fr)); gap:20px; }
+.interest-card { grid-column:span 2; grid-row:span 4; display:grid; grid-template-rows:subgrid; gap:16px; min-width:0; padding:24px; }
+.interest-card:nth-child(n+4) { grid-column:span 3; }
+.interest-card h3 { margin:0; font-size:1.15rem; line-height:1.35; }
+.interest-card p { font-size:1rem; line-height:1.6; }
+.interest-card > .travel-photo,.interest-card > .reading-book,.gaming-collage { margin:0; width:100%; height:300px; align-self:start; }
+.interest-card > .travel-photo { object-fit:contain; background:var(--card); }
+.reading-book { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; }
+.reading-book img { width:auto; max-width:100%; height:240px; object-fit:contain; }
+.reading-book figcaption { margin:0; text-align:center; line-height:1.4; }
+.gaming-collage { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-content:center; gap:8px; }
+.gaming-collage img { display:block; width:100%; height:auto; aspect-ratio:460/215; object-fit:contain; border:1px solid var(--line); border-radius:6px; }
+.interest-card > .interest-link { margin:0; align-self:start; }
+@media (min-width:701px) and (max-width:1000px) {
+  .interests-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .interest-card,.interest-card:nth-child(n+4) { grid-column:span 1; }
+  .interest-card:last-child { grid-column:1 / -1; }
+}
+@media (max-width:700px) {
+  .interests-grid { grid-template-columns:minmax(0,1fr); }
+  .interest-card,.interest-card:nth-child(n+4) { grid-column:1; grid-row:auto; grid-template-rows:auto; }
+  .interest-card > .travel-photo { height:auto; max-height:440px; }
+  .gaming-collage { height:auto; min-height:180px; }
+}
+
+.coding-languages { display:flex; flex-wrap:wrap; align-content:flex-start; gap:10px; margin:0; padding:0; list-style:none; align-self:start; }
+.coding-languages li { padding:9px 14px; border:1px solid var(--line); border-radius:8px; color:var(--accent); font-size:.95rem; line-height:1.4; }
+
+.gaming-collage { height:auto; aspect-ratio:1; grid-template-rows:repeat(2,minmax(0,1fr)); align-content:stretch; gap:8px; }
+.gaming-collage figure { min-width:0; min-height:0; margin:0; display:flex; flex-direction:column; justify-content:center; overflow:hidden; background:var(--card); border:1px solid var(--line); border-radius:8px; }
+.gaming-collage img { width:100%; height:auto; max-height:65%; object-fit:contain; border:0; border-radius:0; }
+.gaming-collage figcaption { padding:8px 6px; text-align:center; font-size:.875rem; line-height:1.25; color:var(--text); }
+.gaming-collage small { display:block; margin-top:3px; font-size:.75rem; color:var(--muted); }
+.coding-languages li { display:flex; align-items:center; gap:10px; }
+.coding-languages img { width:28px; height:28px; object-fit:contain; }
+
+.photo-slots { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 20px; align-items:start; }
+.photo-slot .personal-photo { width:100%; height:clamp(280px,38vw,480px); object-fit:contain; background:var(--card); }
+.photo-slot figcaption { font-size:.875rem; line-height:1.5; letter-spacing:.03em; }
+@media (max-width:700px) {
+  .photo-slots { grid-template-columns:minmax(0,1fr); }
+  .photo-slot .personal-photo { height:auto; max-height:none; }
+}
